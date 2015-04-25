@@ -1,11 +1,16 @@
+
 <div layout="row">
+<div flex="5" layout="column">
+    <a><i class="md-accent fa fa-home fa-4x"></i></a>
+    <a><i class="fa fa-edit fa-4x"></i></a>
+    <a><i class="fa fa-envelope-o fa-4x"></i></a>
+</div>
 <poi-detail ng-if="!poiAdminCtrl.closed" poi="poiAdminCtrl.poi" ></poi-detail>
 
 
 <md-content ng-if = "poiAdminCtrl.page" style="width:30%">
     <md-card>
         <h2>{{poiAdminCtrl.page.name}}</h2>
-
                     <h4>{{poiAdminCtrl.page.about}}</h4>
                     <h4>{{poiAdminCtrl.page.likes}} Likes </h4>
                     <p><a href="{{poiAdminCtrl.page.link}}">{{poiAdminCtrl.page.link}}</a></p>

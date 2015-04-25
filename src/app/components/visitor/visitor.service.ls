@@ -14,8 +14,8 @@ angular.module \reetail .factory \visitorService , (uiGmapGoogleMapApi, poiServi
       d.setMonth(new Date(Date.now!).getMonth!)
       d.setYear(new Date(Date.now!).getFullYear!)
     dates = [d, d1].sort!
-    myService.visitors.push(id: it, name: chance.first! , age: chance.age!, where: chance.integer({min: 0, max: 20}), entered: dates[0], left: dates[1])
-  , [2 to 300]
+    myService.visitors.push(id: it, name: chance.first! , age: chance.age!, where: chance.integer({min: 0, max: 400}), entered: dates[0], left: dates[1])
+  , [2 to 1000]
   myService.getVisitors = (selector) ->
     visitors = myService.visitors
     if selector
@@ -32,7 +32,7 @@ angular.module \reetail .factory \visitorService , (uiGmapGoogleMapApi, poiServi
 
   myService.getVisitorsIn = (poiId, selector) ->
     myService.visitors
-    |> filter (.where == poiId)
+    |> filter (.where == Number(poiId))
     |> reject (.left && (!selector || !selector.all))
 
   myService.getMinimumAge = ->
@@ -48,7 +48,7 @@ angular.module \reetail .factory \visitorService , (uiGmapGoogleMapApi, poiServi
       points = new maps.MVCArray
       each !->
         p = poiService.get(it.where)
-        points.push new maps.LatLng p.lat, p.lon if p && p.lat && p.lon
+        points.push new maps.LatLng Number(p.lat), Number(p.lon) if p && p.lat && p.lon
       , myService.visitors
       layer.setData points
 

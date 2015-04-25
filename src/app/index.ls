@@ -1,4 +1,4 @@
-angular.module 'reetail', <[ ngAnimate ngCookies ngTouch ngSanitize ngResource ngRoute ngMaterial uiGmapgoogle-maps angularMoment facebook ]>
+angular.module 'reetail', <[ ngAnimate ngCookies ngTouch ngSanitize ngResource ngRoute ngMaterial uiGmapgoogle-maps angularMoment facebook firebase ]>
 .config ($routeProvider) !->
   $routeProvider
   .when "/" do
@@ -12,6 +12,10 @@ angular.module 'reetail', <[ ngAnimate ngCookies ngTouch ngSanitize ngResource n
     templateUrl: "app/components/poi.admin/poi.admin.html"
     controllerAs: "poiAdminCtrl"
     controller: "PoiAdminCtrl"
+  .when '/poiAdmin/:id/post' do
+    templateUrl: "app/components/poi.admin.post/poi.admin.post.html"
+    controllerAs: "poiAdminPostCtrl"
+    controller: "PoiAdminPostCtrl"
   .otherwise do
     redirectTo: "/"
 .config (uiGmapGoogleMapApiProvider) !->
