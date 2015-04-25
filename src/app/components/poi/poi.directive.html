@@ -19,8 +19,9 @@
                         <h4>{{poiDetail.visitors(poi.id, {all: true}).length}} visiteurs </h4>
                         <ul>
                             <li> Age moyen: {{poiDetail.visitors(poi.id, {all: true}) | pluck:'age' | mean | number:1}}</li>
+                            <li> Durée moyenne: {{poiDetail.visitors(poi.id, {all: true}) | duration | mean | number}}</li>
                         </ul>
-                            <md-button ng-click="closeMe()" >Fermer</md-button>
+                            <md-button ng-if="closeMe" ng-click="closeMe()" >Fermer</md-button>
                      </md-content>
                     </md-tab>
                 </md-tabs>
