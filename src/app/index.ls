@@ -16,6 +16,10 @@ angular.module 'reetail', <[ ngAnimate ngCookies ngTouch ngSanitize ngResource n
     templateUrl: "app/components/poi.admin.post/poi.admin.post.html"
     controllerAs: "poiAdminPostCtrl"
     controller: "PoiAdminPostCtrl"
+  .when '/poiAdmin/:id/settings' do
+    templateUrl: "app/components/poi.admin.settings/poi.admin.settings.html"
+    controllerAs: "poiAdminSettingstCtrl"
+    controller: "PoiAdminSettingsCtrl"
   .otherwise do
     redirectTo: "/"
 .config (uiGmapGoogleMapApiProvider) !->

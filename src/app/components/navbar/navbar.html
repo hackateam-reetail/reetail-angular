@@ -1,13 +1,6 @@
-<md-toolbar layout="row" layout-align="center center" ng-controller="NavbarCtrl">
-
-  <md-button href="https://github.com/Swiip/generator-gulp-angular">Gulp Angular</md-button>
-
-  <section flex layout="row" layout-align="left center">
-    <md-button href="#" class="md-raised">Home</md-button>
-    <md-button href="#" class="md-raised">About</md-button>
-    <md-button href="#" class="md-raised">Contact</md-button>
-  </section>
-
-  <md-button href="#">Current date: {{ date | date:'yyyy-MM-dd' }}</md-button>
-
-</md-toolbar>
+<div flex="5" layout-gt-sm="column" layout-sm="row" style="border-right:1px solid grey; text-align: center; margin-right:2px;">
+  <a><i class="md-accent fa fa-home fa-3x" style="color:rgb(255, 64, 129);"></i></a>
+  <a><i class="fa fa-edit fa-3x" style="color:rgb(255, 64, 129);"></i></a>
+  <a><i class="fa fa-envelope-o fa-3x" style="color:rgb(255, 64, 129);"></i></a>
+  <a ng-href="#/poiAdmin/78/settings"><i class="fa fa-cog fa-3x" style="color:rgb(255, 64, 129);"></i></a>
+</div>

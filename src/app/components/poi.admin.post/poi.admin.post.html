@@ -1,10 +1,6 @@
 <div layout-gt-sm="row" layout-sm="column">
-    <div flex="5" layout-gt-sm="column" layout-sm="row" style="border-right:1px solid grey; text-align: center; margin-right:2px;">
-        <a><i class="md-accent fa fa-home fa-3x" style="color:rgb(255, 64, 129);"></i></a>
-        <a><i class="fa fa-edit fa-3x" style="color:rgb(255, 64, 129);"></i></a>
-        <a><i class="fa fa-envelope-o fa-3x" style="color:rgb(255, 64, 129);"></i></a>
-    </div>
 
+        <navbar></navbar>
     <div flex="90">
         <md-input-container>
             <label>Titre</label>
@@ -15,20 +11,24 @@
             <textarea ng-model="corps" required/>
         </md-input-container>
         <section layout="row" layout-sm="column" layout-align="center center">
-            <div flex="25" layout-align="center center">
-                <md-button class="md-fab">
-                <i class="fa fa-envelope-o fa-2x"></i>
-            </md-button></div>
-            <div flex="25" layout-align="center center">
-                <md-button class="md-fab">
-                <i class="fa fa-twitter fa-2x"></i>
-            </md-button></div>
-            <div flex="25" layout-align="center center">
-                <md-button class="md-fab">
+            <div flex="20" layout-align="center center">
+                    <md-button class="md-fab" ng-class="{'md-raised': !selected.mail}" ng-click="selected.mail = !selected.mail">
+                        <i class="fa fa-envelope-o fa-2x"></i>
+                    </md-button></div>
+            <div flex="20" layout-align="center center">
+                <md-button class="md-fab" ng-class="{'md-raised': !selected.twitter}" ng-click="selected.twitter = !selected.twitter">
+                    <i class="fa fa-twitter fa-2x"></i>
+                </md-button></div>
+            <div flex="20" layout-align="center center">
+                <md-button class="md-fab" ng-class="{'md-raised': !selected.texto}" ng-click="selected.texto = !selected.texto">
                 <i class="fa fa-mobile fa-2x"></i>
             </md-button></div>
-            <div flex="25" layout-align="center center">
-                <md-button class="md-fab">
+            <div flex="20" layout-align="center center">
+                <md-button class="md-fab" ng-class="{'md-raised': !selected.facebook}" ng-click="selected.facebook = !selected.facebook">
+                <i class="fa fa-facebook fa-2x"></i>
+            </md-button></div>
+            <div flex="20" layout-align="center center">
+                <md-button class="md-fab" ng-class="{'md-raised': !selected.wordpress}" ng-click="selected.wordpress = !selected.wordpress">
                 <i class="fa fa-wordpress fa-2x"></i>
             </md-button></div>
         </section>
@@ -61,12 +61,12 @@
             </div>
             <p>Sexe </p>
             <md-radio-group ng-model="data.group1">
-                <md-radio-button value="Apple" class="md-primary">Homme</md-radio-button>
-                <md-radio-button value="Banana"> Femme </md-radio-button>
+                <md-radio-button value="male">Homme</md-radio-button>
+                <md-radio-button value="female"> Femme </md-radio-button>
             </md-radio-group>
         </md-content>
-
-        <md-button md-no-ink class="md-primary" style="position:relative !important;">Envoyer</md-button>
+<br>
+        <md-button md-no-ink class="md-primary md-raised" style="position:relative !important;">Envoyer</md-button>
     </div>
 </div>
 
