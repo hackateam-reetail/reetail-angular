@@ -1,0 +1,31 @@
+<div layout="row">
+    <md-content>
+        <md-card>
+            <h2>{{poi.name}}</h2>
+            <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab label="Live">
+                    <md-content class="md-padding">
+                        <h1 class="md-display-2">En ce moment</h1>
+                        <h4>{{poiDetail.visitors(poi.id).length}} visiteurs présents: </h4>
+                        <ul>
+                            <li ng-repeat="visitor in poiDetail.visitors(poi.id)">{{visitor.name}} <span am-time-ago="visitor.entered"></span> </li>
+                        </ul>
+                            <md-button ng-click="closeMe()" >Fermer</md-button>
+                     </md-content>
+                    </md-tab>
+                <md-tab label="Stats">
+                    <md-content class="md-padding">
+                        <h1 class="md-display-2">Statistiques</h1>
+                        <h4>{{poiDetail.visitors(poi.id, {all: true}).length}} visiteurs </h4>
+                        <ul>
+                            <li> Age moyen: {{poiDetail.visitors(poi.id, {all: true}) | pluck:'age' | mean | number:1}}</li>
+                        </ul>
+                            <md-button ng-click="closeMe()" >Fermer</md-button>
+                     </md-content>
+                    </md-tab>
+                </md-tabs>
+        </md-card>
+    </md-content>
+</div>
+
+

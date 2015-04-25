@@ -1,4 +1,4 @@
-angular.module 'reetail', <[ ngAnimate ngCookies ngTouch ngSanitize ngResource ngRoute ngMaterial uiGmapgoogle-maps ]>
+angular.module 'reetail', <[ ngAnimate ngCookies ngTouch ngSanitize ngResource ngRoute ngMaterial uiGmapgoogle-maps angularMoment ]>
 .config ($routeProvider) !->
   $routeProvider
   .when "/" do
@@ -14,3 +14,5 @@ angular.module 'reetail', <[ ngAnimate ngCookies ngTouch ngSanitize ngResource n
   uiGmapGoogleMapApiProvider.configure do
       v: '3.17',
       libraries: 'weather,geometry,visualization'
+.run (amMoment)->
+  amMoment.changeLocale \fr

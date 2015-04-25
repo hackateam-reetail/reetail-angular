@@ -1,0 +1,34 @@
+
+
+
+<md-select placeholder="Points D'intérêt" ng-model="poiCtrl.selectedPoi">
+    <md-option ng-repeat="poi in poiCtrl.pois" ng-value="poi">{{poi.name}}</md-option>
+</md-select>
+
+    <poi-detail ng-if="poiCtrl.selectedPoi" poi="poiCtrl.selectedPoi" close-me="poiCtrl.close()"></poi-detail>
+<div layout>
+    <div flex="10" layout layout-align="center center">
+        <span class="md-body-1">Age Min.</span>
+    </div>
+    <md-slider flex ng-change="poiCtrl.changeAge(poiCtrl.minAgeSelected, poiCtrl.maxAgeSelected)" min="{{poiCtrl.minAge}}"  max="{{poiCtrl.maxAgeSelected}}" ng-model="poiCtrl.minAgeSelected" aria-label="red" id="min-age-slider" class>
+    </md-slider>
+    <div flex="20" layout layout-align="center center">
+        <input type="number" ng-change="poiCtrl.changeAge(poiCtrl.minAgeSelected, poiCtrl.maxAgeSelected)" ng-model="poiCtrl.minAgeSelected" min="{{poiCtrl.minAge}}" max="{{poiCtrl.maxAgeSelected}}" aria-label="age-min" aria-controls="red-slider">
+    </div>
+</div>
+<div layout>
+    <div flex="10" layout layout-align="center center">
+        <span class="md-body-1">Age Max.</span>
+    </div>
+    <md-slider flex ng-change="poiCtrl.changeAge(poiCtrl.minAgeSelected, poiCtrl.maxAgeSelected)" min="{{poiCtrl.minAgeSelected}}" max="{{poiCtrl.maxAge}}" ng-model="poiCtrl.maxAgeSelected" aria-label="red" id="max-age-slider" class>
+    </md-slider>
+    <div flex="20" layout layout-align="center center">
+        <input type="number" ng-change="poiCtrl.changeAge(poiCtrl.minAgeSelected, poiCtrl.maxAgeSelected)" ng-model="poiCtrl.maxAgeSelected" min="{{poiCtrl.minAgeSelected}}" max="{{poiCtrl.maxAge}}" aria-label="age-max" aria-controls="red-slider">
+    </div>
+</div>
+
+<ui-gmap-google-map center='poiCtrl.map.center' zoom='poiCtrl.map.zoom'>
+    <ui-gmap-marker ng-repeat="poi in poiCtrl.pois" idKey="$index" coords="{latitude: poi.lat, longitude: poi.lon}"></ui-gmap-marker>
+    <ui-gmap-layer namespace="visualization" type="HeatmapLayer" options="{radius: 50}" show="true" onCreated ="poiCtrl.heatLayerCreation" ></ui-gmap-layer>
+
+</ui-gmap-google-map>
