@@ -12,6 +12,10 @@ angular.module 'reetail', <[ ngAnimate ngCookies ngTouch ngSanitize ngResource n
     templateUrl: "app/components/poi.admin/poi.admin.html"
     controllerAs: "poiAdminCtrl"
     controller: "PoiAdminCtrl"
+  .when '/poiAdmin/:id/inbox' do
+    templateUrl: "app/components/poi.admin.inbox/poi.admin.inbox.html"
+    controllerAs: "poiAdminInboxCtrl"
+    controller: "PoiAdminInboxCtrl"
   .when '/poiAdmin/:id/post' do
     templateUrl: "app/components/poi.admin.post/poi.admin.post.html"
     controllerAs: "poiAdminPostCtrl"

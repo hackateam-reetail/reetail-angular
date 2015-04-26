@@ -60,6 +60,38 @@ section.jumbotron {
   }
 }
 
+.inbox {
+  md-content{
+    width: 100%;
+    border-top: 1px solid lightgray;
+    background-color: white;
+    padding: 1rem 2rem;
+  }
+//  .fa-times,.fa-reply {
+//    margin-left: 50px;
+//  }
+  md-toolbar{
+    margin-top: 5px;
+    box-shadow: none;
+    background-color: white;
+//    .user, .titre {
+//      margin-left: 50px;
+//    }
+    .user {
+      font-size: 70%;
+    }
+    .titre {
+      font-size: 90%;
+    }
+    .fa {
+      font-size: 150%;
+    }
+//    i {
+//      margin-left: 20px;
+//    }
+  }
+}
+
 .monitor md-card {
   background-color: white;
 }
@@ -101,11 +133,11 @@ section.jumbotron {
     padding: 0.4rem;
   }
   li.active {
-      background-color: rgb(255, 64, 129);
-      a {
-        color: white;
-      }
+    background-color: rgb(255, 64, 129);
+    a {
+      color: white;
     }
+  }
   li + li {
     margin-top: 1.5rem;
     height: 100%;
