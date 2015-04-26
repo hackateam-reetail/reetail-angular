@@ -1,7 +1,35 @@
 <div layout-gt-sm="row" layout-sm="column">
 
-        <navbar></navbar>
-    <div flex="90">
+    <navbar poi-id="poiAdminSettingstCtrl.poiId"></navbar>
+
+    <md-progress-circular md-mode="indeterminate" ng-if="poiAdminSettingstCtrl.poiLoading"></md-progress-circular>
+    <div flex="90" ng-if="!poiAdminSettingstCtrl.poiLoading">
+            <h2>{{poiAdminSettingstCtrl.poi.name}}</h2>
+            <h4>{{poiAdminSettingstCtrl.poi.adresse}}</h4>
+        <md-toolbar class="md-theme-light">
+            <h2 class="md-toolbar-tools">
+                <span>Facebook</span>
+            </h2>
+        </md-toolbar>
+
+        <div ng-show="!poiAdminSettingstCtrl.poi.fb_page_id">
+            <md-button ng-click="poiAdminSettingstCtrl.login()">Se connecter via facebook</md-button>
+            <div layout-gt-sm="row" layout-sm="column">
+                <md-card ng-repeat="page in poiAdminSettingstCtrl.pages">
+                    <h2>{{page.name}}</h2>
+                    <small>{{page.category}}</small>
+                    <md-button ng-click="poiAdminSettingstCtrl.savePageToken(page)">Enregistrer
+                    </md-button>
+                </md-card>
+            </div>
+        </div>
+        <div ng-show="poiAdminSettingstCtrl.poi.fb_page_id">
+            <md-card ng-if="!poiAdminSettingstCtrl.fbLoading">
+                <h2><i class="fa fa-check" style="color:green"/>{{poiAdminSettingstCtrl.page.name}}</h2>
+                <small>{{poiAdminSettingstCtrl.page.category}}</small>
+            </md-card>
+         <md-progress-circular md-mode="indeterminate" ng-if="poiAdminSettingstCtrl.fbLoading"></md-progress-circular>
+        </div>
 
     </div>
 </div>

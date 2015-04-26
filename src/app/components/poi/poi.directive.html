@@ -4,22 +4,22 @@
     <md-card flex="30">
       <md-content class="stat-content" layout-margin>
         <h1 class="md-display-2">En ce moment</h1>
-        <h4>{{poiDetail.visitors(poi.$id).length}} visiteurs présents</h4>
+        <h4>{{poi.users | visitors | length }} visiteurs présents</h4>
         <ul>
-          <li ng-repeat="visitor in poiDetail.visitors(poi.$id)">{{visitor.name}} <span am-time-ago="visitor.entered"></span> </li>
+          <li ng-repeat="visitor in poi.users | visitors">{{visitor.name}} <span am-time-ago="visitor.entered"></span> </li>
         </ul>
       </md-content>
     </md-card>
     <md-card flex>
       <md-content class="stat-content" layout-margin>
         <h1 class="md-display-2">Statistiques</h1>
-        <h4>{{poiDetail.visitors(poi.$id, {all: true}).length}} visiteurs</h4>
+        <h4>{{poi.users | visitors:true | length}} visiteurs </h4>
         <ul class="stat">
           <li layout-gt-sm="row" layout-sm="column"> Age moyen
-            <md-progress-linear class="md-accent" style="margin-left:20px;margin-top:0.3rem" flex md-mode="determinate" ng-value="{{poiDetail.visitors(poi.$id, {all: true}) | pluck:'age' | mean | number:1}}"></md-progress-linear>
+            <md-progress-linear class="md-accent" style="margin-left:20px;margin-top:0.3rem" flex md-mode="determinate" ng-value="poi.users | visitors:true | pluck:'age' | mean "></md-progress-linear>
           </li>
           <li layout-gt-sm="row" layout-sm="column">Durée moyenne
-            <md-progress-linear class="md-accent" style="margin-left:20px;margin-top:0.3rem" flex md-mode="determinate" ng-value="{{poiDetail.visitors(poi.$id, {all: true}) | duration | mean | number}}"></md-progress-linear>
+            <md-progress-linear class="md-accent" style="margin-left:20px;margin-top:0.3rem" flex md-mode="determinate" ng-value="poi.users | visitors:true | duration | mean"></md-progress-linear>
           </li>
         </ul>
       </md-content>

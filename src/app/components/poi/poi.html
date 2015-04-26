@@ -1,8 +1,8 @@
 <div layout-gt-sm="row" layout-sm="column">
   <navbar></navbar>
   <div flex="90" layout="column" layout-align="center center">
-    <md-select class="md-accent" style="font-size:200%;font-weigth:300;margin:auto" placeholder="Points d'intérêt" ng-model="poiCtrl.selectedPoi">
-      <md-option ng-repeat="poi in poiCtrl.pois" ng-value="poi">{{poi.name}}</md-option>
+    <md-select class="md-accent" style="font-size:200%;font-weigth:300;margin:auto" placeholder="Points d'intérêt" ng-model="poiCtrl.selectedPoi" ng-change="poiCtrl.location(poiCtrl.selectedPoi)">
+      <md-option ng-repeat="poi in poiCtrl.pois | orderBy:'name'" ng-value="poi">{{poi.name}}</md-option>
     </md-select>
     <poi-detail style="width:100%;" ng-if="poiCtrl.selectedPoi" poi="poiCtrl.selectedPoi" close-me="poiCtrl.close()"></poi-detail>
   </div>
@@ -43,7 +43,7 @@
     </md-radio-group>
   </div>
 </md-content>
-<ui-gmap-google-map flex="90" center='poiCtrl.map.center' zoom='poiCtrl.map.zoom'>
-  <ui-gmap-marker ng-repeat="poi in poiCtrl.pois" idKey="$index" coords="{latitude: poi.lat, longitude: poi.lon}"></ui-gmap-marker>
-  <ui-gmap-layer namespace="visualization" type="HeatmapLayer" options="{radius: 50}" show="true" onCreated ="poiCtrl.heatLayerCreation" ></ui-gmap-layer>
+<ui-gmap-google-map center='poiCtrl.map.center' zoom='poiCtrl.map.zoom'>
+    <ui-gmap-marker ng-repeat="poi in poiCtrl.pois" idKey="$index" coords="{latitude: poi.lat, longitude: poi.lon}" click="poiCtrl.markerClicked(poi)"></ui-gmap-marker>
+    <ui-gmap-layer namespace="visualization" type="HeatmapLayer" options="{radius: 50}" show="true" onCreated ="poiCtrl.heatLayerCreation" ></ui-gmap-layer>
 </ui-gmap-google-map>

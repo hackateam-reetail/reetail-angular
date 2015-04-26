@@ -1,6 +1,6 @@
 {each} = require 'prelude-ls'
 angular.module "reetail"
-  .controller "PoiAdminCtrl", ($routeParams, Facebook, poiService, visitorService) !->
+  .controller "PoiAdminCtrl", ($routeParams, Facebook, poiService) !->
     @poi = poiService.get $routeParams.id
     @login = !->
       Facebook.login !->
