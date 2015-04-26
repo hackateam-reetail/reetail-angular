@@ -22,7 +22,9 @@
         </md-button></div>
       <div flex="20" layout-align="center center">
         <md-button class="md-fab" ng-class="{'md-raised': !selected.texto}" ng-click="selected.texto = !selected.texto">
-          <i class="fa fa-mobile fa-2x"></i>
+          <i class="fa fa-mobile fa-2x" ng-if="!poiAdminPostCtrl.texto_sent && !poiAdminPostCtrl.texto_sending"></i>
+          <md-progress-circular md-mode="indeterminate" ng-if="poiAdminPostCtrl.texto_sending"></md-progress-circular>
+          <i class="fa fa-check fa-2x" ng-if="poiAdminPostCtrl.texto_sent"></i>
         </md-button></div>
       <div flex="20" layout-align="center center">
         <md-button class="md-fab" ng-class="{'md-raised': !selected.facebook}" ng-click="selected.facebook = !selected.facebook">
@@ -32,7 +34,9 @@
         </md-button></div>
       <div flex="20" layout-align="center center">
         <md-button class="md-fab" ng-class="{'md-raised': !selected.wordpress}" ng-click="selected.wordpress = !selected.wordpress">
-          <i class="fa fa-wordpress fa-2x"></i>
+          <i class="fa fa-wordpress fa-2x" ng-if="!poiAdminPostCtrl.wp_sent && !poiAdminPostCtrl.wp_sending"></i>
+          <md-progress-circular md-mode="indeterminate" ng-if="poiAdminPostCtrl.wp_sending"></md-progress-circular>
+          <i class="fa fa-check fa-2x" ng-if="poiAdminPostCtrl.wp_sent"></i>
         </md-button></div>
     </section>
     <br>

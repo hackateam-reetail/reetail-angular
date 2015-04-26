@@ -1,9 +1,6 @@
-angular.module 'reetail', <[ ngAnimate ngCookies ngTouch ngSanitize ngResource ngRoute ngMaterial uiGmapgoogle-maps angularMoment facebook firebase ]>
+angular.module 'reetail', <[ ngAnimate ngCookies ngTouch ngSanitize ngResource ngRoute ngMaterial uiGmapgoogle-maps angularMoment facebook firebase base64 ]>
 .config ($routeProvider) !->
   $routeProvider
-  .when "/" do
-    templateUrl: "app/main/main.html"
-    controller: "MainCtrl"
   .when '/poi' do
     templateUrl: "app/components/poi/poi.html"
     controllerAs: "poiCtrl"
@@ -25,7 +22,7 @@ angular.module 'reetail', <[ ngAnimate ngCookies ngTouch ngSanitize ngResource n
     controllerAs: "poiAdminSettingstCtrl"
     controller: "PoiAdminSettingsCtrl"
   .otherwise do
-    redirectTo: "/"
+    redirectTo: "/poi"
 .config (uiGmapGoogleMapApiProvider) !->
   uiGmapGoogleMapApiProvider.configure do
       v: '3.17',

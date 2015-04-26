@@ -5,11 +5,9 @@ angular.module "reetail"
       @pois = it
       i = 0
       @poisMarkers = map -> {id: i++, latitude: it.lat, longitude: it.lon}, @pois
-      console.info @poisMarkers
       if $location.search!.poi
         @selectedPoi = find (.$id === $location.search!.poi), @pois
     @markerClicked = (clickedPoi)->
-        console.info(clickedPoi)
         @selectedPoi = clickedPoi
         @location(clickedPoi)
     @location = (poi)->
