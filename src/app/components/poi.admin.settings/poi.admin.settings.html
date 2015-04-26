@@ -1,6 +1,6 @@
 <div layout-gt-sm="row" layout-sm="column">
 
-    <navbar poi-id="poiAdminSettingstCtrl.poiId"></navbar>
+    <navbar poi-id="poiAdminSettingstCtrl.poi.$id"></navbar>
 
     <md-progress-circular md-mode="indeterminate" ng-if="poiAdminSettingstCtrl.poiLoading"></md-progress-circular>
     <div flex="90" ng-if="!poiAdminSettingstCtrl.poiLoading">
@@ -8,7 +8,7 @@
             <h4>{{poiAdminSettingstCtrl.poi.adresse}}</h4>
         <md-toolbar class="md-theme-light">
             <h2 class="md-toolbar-tools">
-                <span>Facebook</span>
+                <span><i class="fa fa-facebook"/>&nbsp;Facebook</span>
             </h2>
         </md-toolbar>
 
@@ -31,6 +31,41 @@
          <md-progress-circular md-mode="indeterminate" ng-if="poiAdminSettingstCtrl.fbLoading"></md-progress-circular>
         </div>
 
+        <md-toolbar class="md-theme-light">
+            <h2 class="md-toolbar-tools">
+                <span><i class="fa fa-facebook"/>&nbsp;Twiter</span>
+            </h2>
+        </md-toolbar>
+        <div >
+            <md-button ng-click="poiAdminSettingstCtrl.login()">Se connecter via twitter</md-button>
+
+        </div>
+
+        <md-toolbar class="md-theme-light">
+            <h2 class="md-toolbar-tools">
+                <span><i class="fa fa-envelope-o"/>&nbsp;Email</span>
+            </h2>
+        </md-toolbar>
+        <div >
+            <md-button ng-click="poiAdminSettingstCtrl.login()">Gérer les comptes e-mailr</md-button>
+
+        </div>
+        <md-toolbar class="md-theme-light">
+            <h2 class="md-toolbar-tools">
+                <span><i class="fa fa-wordpress"/>&nbsp;Wordpress</span>
+            </h2>
+        </md-toolbar>
+        <div >
+            <md-button ng-click="poiAdminSettingstCtrl.login()">Site Wordpress</md-button>
+        </div>
+        <md-toolbar class="md-theme-light">
+            <h2 class="md-toolbar-tools">
+                <span><i class="fa fa-mobile-o"/>&nbsp;SMS</span>
+            </h2>
+        </md-toolbar>
+        <div >
+            <md-button ng-click="poiAdminSettingstCtrl.login()">Gérer les options SMS</md-button>
+        </div>
     </div>
 </div>
 

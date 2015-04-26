@@ -1,5 +1,5 @@
 <div layout-gt-sm="row" layout-sm="column">
-  <navbar></navbar>
+  <navbar poi-id="poiCtrl.selectedPoi.$id"></navbar>
   <div flex="90" layout="column" layout-align="center center">
     <md-select class="md-accent" style="font-size:200%;font-weigth:300;margin:auto" placeholder="Points d'intérêt" ng-model="poiCtrl.selectedPoi" ng-change="poiCtrl.location(poiCtrl.selectedPoi)">
       <md-option ng-repeat="poi in poiCtrl.pois | orderBy:'name'" ng-value="poi">{{poi.name}}</md-option>
