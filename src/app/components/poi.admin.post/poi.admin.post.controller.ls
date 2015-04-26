@@ -16,7 +16,11 @@ angular.module "reetail"
     @postMessage = (titre, corps, reseaux) !~>
       console.info reseaux
       if reseaux && reseaux.facebook && @poi.fb_page_id
-        postalService.postToFacebook(corps, @poi.fb_page_id, @poi.fb_token, ->console.info it)
+        @fb_sending = true
+        @fb_sent = false
+        postalService.postToFacebook corps, @poi.fb_page_id, @poi.fb_token, ~>
+          @fb_sending = false
+          @fb_sent = true
       if reseaux && reseaux.texto
         console.info('text')
         postalService.postToMobile(corps,->console.info it)

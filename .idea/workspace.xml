@@ -40,8 +40,8 @@
       <file leaf-file-name="poi.directive.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/components/poi/poi.directive.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.25">
-              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+            <state vertical-scroll-proportion="-3.125">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-button#0;n#small#1;n#h2#0;n#!!top" expanded="true" />
@@ -53,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="poi.admin.post.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="poi.admin.post.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/components/poi.admin.post/poi.admin.post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.25">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4373178">
+              <caret line="30" column="78" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#div#0;n#md-toolbar#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-button#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -70,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/src/app/components/utils/postService.ls">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="poi.admin.settings.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="poi.admin.settings.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/components/poi.admin.settings/poi.admin.settings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65014577">
-              <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -109,8 +109,18 @@
       <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/components/navbar/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.25">
-              <caret line="2" column="77" selection-start-line="2" selection-start-column="77" selection-end-line="2" selection-end-column="77" />
+            <state vertical-scroll-proportion="-4.375">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="poi.admin.post.controller.ls" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/components/poi.admin.post/poi.admin.post.controller.ls">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -158,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/app/components/poi.admin.settings/poi.admin.post.html" />
         <option value="$PROJECT_DIR$/.tmp/serve/app/components/poi.admin.settings/poi.admin.settings.controller.js" />
         <option value="$PROJECT_DIR$/.tmp/serve/app/components/poi.admin/poi.admin.controller.js" />
-        <option value="$PROJECT_DIR$/src/app/components/navbar/navbar.directive.ls" />
         <option value="$PROJECT_DIR$/src/app/components/visitor/visitor.service.ls" />
         <option value="$PROJECT_DIR$/.tmp/serve/app/components/poi/poi.controller.js" />
         <option value="$PROJECT_DIR$/src/app/components/poi/poi.directive.ls" />
@@ -175,12 +184,13 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_6" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_7" />
         <option value="$PROJECT_DIR$/src/app/components/utils/postService.ls" />
-        <option value="$PROJECT_DIR$/src/app/components/poi.admin.post/poi.admin.post.controller.ls" />
-        <option value="$PROJECT_DIR$/src/app/components/poi.admin.post/poi.admin.post.html" />
         <option value="$PROJECT_DIR$/src/app/components/poi/poi.html" />
         <option value="$PROJECT_DIR$/src/app/components/navbar/navbar.html" />
         <option value="$PROJECT_DIR$/src/app/components/poi/poi.directive.html" />
         <option value="$PROJECT_DIR$/src/app/components/poi.admin.settings/poi.admin.settings.html" />
+        <option value="$PROJECT_DIR$/src/app/components/navbar/navbar.directive.ls" />
+        <option value="$PROJECT_DIR$/src/app/components/poi.admin.post/poi.admin.post.controller.ls" />
+        <option value="$PROJECT_DIR$/src/app/components/poi.admin.post/poi.admin.post.html" />
       </list>
     </option>
   </component>
@@ -776,12 +786,12 @@
       <option name="number" value="Default" />
       <updated>1429862398259</updated>
       <workItem from="1429862399850" duration="2106000" />
-      <workItem from="1429864917382" duration="86579000" />
+      <workItem from="1429864917382" duration="88587000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88685000" />
+    <option name="totallyTimeSpent" value="90693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
@@ -1178,14 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/poi.admin.post/poi.admin.post.controller.ls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17216642">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.tmp/serve/app/components/poi.admin.post/poi.admin.post.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1202,14 +1204,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/poi.admin.post/poi.admin.post.html">
+    <entry file="file://$PROJECT_DIR$/.tmp/serve/app/components/poi/poi.directive.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#div#0;n#md-toolbar#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/poi.admin.settings/poi.admin.settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1226,10 +1233,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/utils/postService.ls">
+    <entry file="file://$PROJECT_DIR$/src/app/components/navbar/navbar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1242,18 +1249,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/serve/app/components/poi/poi.directive.js">
+    <entry file="file://$PROJECT_DIR$/src/app/components/utils/postService.ls">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/poi/poi.directive.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#0;n#small#1;n#h2#0;n#!!top" expanded="true" />
@@ -1264,19 +1271,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/navbar/navbar.html">
+    <entry file="file://$PROJECT_DIR$/src/app/components/poi.admin.post/poi.admin.post.controller.ls">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="77" selection-start-line="2" selection-start-column="77" selection-end-line="2" selection-end-column="77" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/poi.admin.settings/poi.admin.settings.html">
+    <entry file="file://$PROJECT_DIR$/src/app/components/poi.admin.post/poi.admin.post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65014577">
-          <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
-          <folding />
+        <state vertical-scroll-proportion="0.4373178">
+          <caret line="30" column="78" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#div#0;n#md-toolbar#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-button#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
