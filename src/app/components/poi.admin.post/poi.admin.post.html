@@ -1,72 +1,72 @@
 <div layout-gt-sm="row" layout-sm="column">
 
-        <navbar></navbar>
-    <div flex="90">
-        <md-input-container>
-            <label>Titre</label>
-            <input type="text" ng-model="titre" required md-maxlength="140">
-        </md-input-container>
-        <md-input-container>
-            <label>Corps</label>
-            <textarea ng-model="corps" required/>
-        </md-input-container>
-        <section layout="row" layout-sm="column" layout-align="center center">
-            <div flex="20" layout-align="center center">
-                    <md-button class="md-fab" ng-class="{'md-raised': !selected.mail}" ng-click="selected.mail = !selected.mail">
-                        <i class="fa fa-envelope-o fa-2x"></i>
-                    </md-button></div>
-            <div flex="20" layout-align="center center">
-                <md-button class="md-fab" ng-class="{'md-raised': !selected.twitter}" ng-click="selected.twitter = !selected.twitter">
-                    <i class="fa fa-twitter fa-2x"></i>
-                </md-button></div>
-            <div flex="20" layout-align="center center">
-                <md-button class="md-fab" ng-class="{'md-raised': !selected.texto}" ng-click="selected.texto = !selected.texto">
-                <i class="fa fa-mobile fa-2x"></i>
-            </md-button></div>
-            <div flex="20" layout-align="center center">
-                <md-button class="md-fab" ng-class="{'md-raised': !selected.facebook}" ng-click="selected.facebook = !selected.facebook">
-                <i class="fa fa-facebook fa-2x"></i>
-            </md-button></div>
-            <div flex="20" layout-align="center center">
-                <md-button class="md-fab" ng-class="{'md-raised': !selected.wordpress}" ng-click="selected.wordpress = !selected.wordpress">
-                <i class="fa fa-wordpress fa-2x"></i>
-            </md-button></div>
-        </section>
-        <br>
-        <md-toolbar class="md-accent" ng-click="toggle=!toggle">
-            <div class="md-toolbar-tools">
-                    <span>Ciblage</span>&nbsp;<i class="fa" ng-class="{'fa-caret-down' : toggle , 'fa-caret-up': !toggle}"></i>
-            </div>
-        </md-toolbar>
-        <md-content layout-padding ng-show="toggle">
-            <div layout>
-                <div flex="10" layout layout-align="center center">
-                    <span class="md-body-1">Age Min.</span>
-                </div>
-                <md-slider flex ng-change="poiCtrl.changeAge(poiCtrl.minAgeSelected, poiCtrl.maxAgeSelected)" min="{{poiCtrl.minAge}}"  max="{{poiCtrl.maxAgeSelected}}" ng-model="poiCtrl.minAgeSelected" aria-label="red" id="min-age-slider" class>
-                </md-slider>
-                <div flex="20" layout layout-align="center center">
-                    <input type="number" ng-change="poiCtrl.changeAge(poiCtrl.minAgeSelected, poiCtrl.maxAgeSelected)" ng-model="poiCtrl.minAgeSelected" min="{{poiCtrl.minAge}}" max="{{poiCtrl.maxAgeSelected}}" aria-label="age-min" aria-controls="red-slider">
-                </div>
-            </div>
-            <div layout>
-                <div flex="10" layout layout-align="center center">
-                    <span class="md-body-1">Age Max.</span>
-                </div>
-                <md-slider flex ng-change="poiCtrl.changeAge(poiCtrl.minAgeSelected, poiCtrl.maxAgeSelected)" min="{{poiCtrl.minAgeSelected}}" max="{{poiCtrl.maxAge}}" ng-model="poiCtrl.maxAgeSelected" aria-label="red" id="max-age-slider" class>
-                </md-slider>
-                <div flex="20" layout layout-align="center center">
-                    <input type="number" ng-change="poiCtrl.changeAge(poiCtrl.minAgeSelected, poiCtrl.maxAgeSelected)" ng-model="poiCtrl.maxAgeSelected" min="{{poiCtrl.minAgeSelected}}" max="{{poiCtrl.maxAge}}" aria-label="age-max" aria-controls="red-slider">
-                </div>
-            </div>
-            <p>Sexe </p>
-            <md-radio-group ng-model="data.group1">
-                <md-radio-button value="male">Homme</md-radio-button>
-                <md-radio-button value="female"> Femme </md-radio-button>
-            </md-radio-group>
-        </md-content>
-<br>
-        <md-button md-no-ink class="md-primary md-raised" style="position:relative !important;">Envoyer</md-button>
-    </div>
+  <navbar></navbar>
+  <div flex="90">
+    <md-input-container>
+      <label for="titre">Titre</label>
+      <input id="titre" type="text" ng-model="titre" required md-maxlength="140">
+    </md-input-container>
+    <md-input-container>
+      <label for="corps">Corps</label>
+      <textarea id="corps" ng-model="corps" required/>
+    </md-input-container>
+    <section layout="row" layout-sm="column" layout-align="center center">
+      <div flex="20" layout-align="center center">
+        <md-button class="md-fab" ng-class="{'md-raised': !selected.mail}" ng-click="selected.mail = !selected.mail">
+          <i class="fa fa-envelope-o fa-2x"></i>
+        </md-button></div>
+      <div flex="20" layout-align="center center">
+        <md-button class="md-fab" ng-class="{'md-raised': !selected.twitter}" ng-click="selected.twitter = !selected.twitter">
+          <i class="fa fa-twitter fa-2x"></i>
+        </md-button></div>
+      <div flex="20" layout-align="center center">
+        <md-button class="md-fab" ng-class="{'md-raised': !selected.texto}" ng-click="selected.texto = !selected.texto">
+          <i class="fa fa-mobile fa-2x"></i>
+        </md-button></div>
+      <div flex="20" layout-align="center center">
+        <md-button class="md-fab" ng-class="{'md-raised': !selected.facebook}" ng-click="selected.facebook = !selected.facebook">
+          <i class="fa fa-facebook fa-2x"></i>
+        </md-button></div>
+      <div flex="20" layout-align="center center">
+        <md-button class="md-fab" ng-class="{'md-raised': !selected.wordpress}" ng-click="selected.wordpress = !selected.wordpress">
+          <i class="fa fa-wordpress fa-2x"></i>
+        </md-button></div>
+    </section>
+    <br>
+    <md-toolbar class="md-accent" ng-click="toggle=!toggle">
+      <div class="md-toolbar-tools">
+        <span>Ciblage</span><i class="fa" style="margin-left:15px;" ng-class="{'fa-caret-down' : toggle , 'fa-caret-right': !toggle}"></i>
+      </div>
+    </md-toolbar>
+    <md-content layout-padding ng-show="toggle">
+      <div layout>
+        <div flex="10" layout layout-align="center center">
+          <span class="md-body-1">Age Min.</span>
+        </div>
+        <md-slider flex ng-change="poiCtrl.changeAge(poiCtrl.minAgeSelected, poiCtrl.maxAgeSelected)" min="{{poiCtrl.minAge}}"  max="{{poiCtrl.maxAgeSelected}}" ng-model="poiCtrl.minAgeSelected" aria-label="red" id="min-age-slider" class>
+        </md-slider>
+        <div flex="20" layout layout-align="center center">
+          <input type="number" ng-change="poiCtrl.changeAge(poiCtrl.minAgeSelected, poiCtrl.maxAgeSelected)" ng-model="poiCtrl.minAgeSelected" min="{{poiCtrl.minAge}}" max="{{poiCtrl.maxAgeSelected}}" aria-label="age-min" aria-controls="red-slider">
+        </div>
+      </div>
+      <div layout>
+        <div flex="10" layout layout-align="center center">
+          <span class="md-body-1">Age Max.</span>
+        </div>
+        <md-slider flex ng-change="poiCtrl.changeAge(poiCtrl.minAgeSelected, poiCtrl.maxAgeSelected)" min="{{poiCtrl.minAgeSelected}}" max="{{poiCtrl.maxAge}}" ng-model="poiCtrl.maxAgeSelected" aria-label="red" id="max-age-slider" class>
+        </md-slider>
+        <div flex="20" layout layout-align="center center">
+          <input type="number" ng-change="poiCtrl.changeAge(poiCtrl.minAgeSelected, poiCtrl.maxAgeSelected)" ng-model="poiCtrl.maxAgeSelected" min="{{poiCtrl.minAgeSelected}}" max="{{poiCtrl.maxAge}}" aria-label="age-max" aria-controls="red-slider">
+        </div>
+      </div>
+      <p>Sexe </p>
+      <md-radio-group ng-model="data.group1">
+        <md-radio-button value="male">Homme</md-radio-button>
+        <md-radio-button value="female"> Femme </md-radio-button>
+      </md-radio-group>
+    </md-content>
+    <br>
+    <md-button md-no-ink class="md-accent md-raised" style="position:relative !important;">Envoyer</md-button>
+  </div>
 </div>
 

@@ -4,6 +4,10 @@ html {
   font-family: 'Roboto Slab', serif;
 }
 
+body {
+  background-color: rgba(0,0,0,0.02);
+}
+
 .angular-google-map-container { height: 600px; }
 
 
@@ -49,7 +53,6 @@ section.jumbotron {
 
   md-card {
     width: 30%;
-
     img.pull-right {
       float: right;
       width: 50px;
@@ -57,7 +60,91 @@ section.jumbotron {
   }
 }
 
+.monitor md-card {
+  background-color: white;
+}
+
+.stat {
+  list-style: none;
+  padding-left: 0;
+}
+
+.stat li + li {
+  padding-top: 1.1rem;
+}
+
+.stat-content {
+  padding: 1rem 2rem;
+  h1 {
+    margin: 0;
+  }
+}
+
+.navbar {
+  list-style: none;
+  margin: 0;
+  position:relative;
+  z-index: 5;
+  text-align: center;
+  padding: 1rem;
+  height: 100%;
+  h1 {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  a {
+    color:rgb(255, 64, 129);
+    text-decoration: none;
+  }
+  li {
+    border-radius: 5px;
+    padding: 0.4rem;
+  }
+  li.active {
+      background-color: rgb(255, 64, 129);
+      a {
+        color: white;
+      }
+    }
+  li + li {
+    margin-top: 1.5rem;
+    height: 100%;
+  }
+}
+@media (min-width:960px){
+  .navbar li {
+    border: 1px solid rgb(255, 64, 129);
+  }
+}
+
+@media (max-width:600px){
+  li {
+    margin-top: 1.5rem;
+  }
+}
+
+md-input-container.md-default-theme label {
+  color: rgba(0,0,0,0.54);
+}
+
+.md-button.md-default-theme.md-raised {
+  background-color: white;
+}
+
+#corps,#titre {
+  background-color: white;
+  border-radius: 2px;
+}
+
+.filtre {
+  h4 {
+    margin: 0;
+  }
+  md-radio-button {
+    margin: 0.6rem;
+  }
+}
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
-   all your sass files automatically */
+all your sass files automatically */
 // injector
 // endinjector
